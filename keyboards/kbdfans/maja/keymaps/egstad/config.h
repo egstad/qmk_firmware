@@ -15,7 +15,6 @@
  */
 
 #pragma once
-#define IGNORE_MOD_TAP_INTERRUPT
 
 
 /* Leader Key
@@ -35,13 +34,13 @@
    ========================================================================== */
 
 // This controls how long you have to hold a key before you get the shifted state.
-#define AUTO_SHIFT_TIMEOUT 150
+#define AUTO_SHIFT_TIMEOUT 175
 
 // Do not Auto Shift special keys -_, =+, [{, ]}, ;:, '", ,<, .>, and /?
 // #define NO_AUTO_SHIFT_SPECIAL
 
 // Do not Auto Shift numeric keys, zero through nine.
-#define NO_AUTO_SHIFT_NUMERIC
+// #define NO_AUTO_SHIFT_NUMERIC
 
 // Do not Auto Shift alpha characters, which include A through Z.
 // #define NO_AUTO_SHIFT_ALPHA
