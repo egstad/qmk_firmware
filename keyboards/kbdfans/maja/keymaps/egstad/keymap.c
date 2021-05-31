@@ -1,4 +1,4 @@
-/* Copyright 2020 Jordan Egstad
+/* Copyright 2021 Jordan Egstad
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,16 +28,16 @@
 #define ZM_OUT LCTL(KC_MINUS)      	// Zoom out
 
 // Cursor navigation 
-#define NX_WRD LCTL(KC_LEFT)				// Move to next word
-#define PV_WRD LCTL(KC_RGHT)				// Move to prev word
+#define NX_WRD LALT(KC_RGHT)				// Move to next word
+#define PV_WRD LALT(KC_LEFT)				// Move to prev word
 #define LN_STR KC_HOME							// Move to beginning of line
 #define LN_END KC_END								// Move to end of line
 
 // Text selection 
-#define SEL_PV LSFT(LCTL(KC_LEFT))	// Select next word
-#define SEL_NX LSFT(LCTL(KC_RGHT))	// Select prev word
-#define SEL_ST LSFT(KC_HOME)				// Select to beginning of line
-#define SEL_EN LSFT(KC_END)					// Select to end of line
+#define SEL_PV LSFT(LCTL(KC_LEFT))	// Select prev word
+#define SEL_NX LSFT(LCTL(KC_RGHT)) 	// Select next word
+#define SEL_ST LSFT(LCTL(KC_UP))		// Select to beginning of line
+#define SEL_EN LSFT(LCTL(KC_DOWN))	// Select to end of line
 
 
 
@@ -57,11 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			 * █▀▀ █░█ █▄░█ █▀▀ ▀█▀ █ █▀█ █▄░█
 			 * █▀░ █▄█ █░▀█ █▄▄ ░█░ █ █▄█ █░▀█
 			 */  
-			RESET,  	KC_F1,    KC_F2,   	KC_F3,  	KC_F4,   	KC_F5,   	KC_F6,   	KC_F7,   	KC_F8,   	KC_F9,   	KC_F10,   KC_F11,  	KC_F12,  	KC_DEL,   KC_TRNS,
-		  KC_TRNS,  RGB_TOG,  RGB_MOD, 	RGB_HUI,	RGB_SAI, 	RGB_VAI, 	KC_TRNS, 	NX_WRD, 	LN_STR, 	LN_END, 	PV_WRD, 	KC_TRNS,  KC_TRNS, 	KC_TRNS,  KC_BRIU,
-			KC_TRNS,  SEL_PV,   SEL_ST, 	SEL_EN,		SEL_NX, 	KC_TRNS, 	KC_TRNS, 	KC_LEFT, 	KC_UP,   	KC_DOWN, 	KC_RGHT,  KC_TRNS,          	KC_MPLY,  KC_BRID,
-		  KC_ASTG,  KC_TRNS,  KC_TRNS, 	KC_TRNS,	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS,  KC_TRNS, 	KC_MUTE, 	KC_VOLU,
-		  KC_TRNS,            KC_TRNS, 	CG_TOGG,  KC_DEL,           	KC_TRNS,  KC_TRNS,                    											KC_MPRV, 	KC_VOLD,  KC_MNXT),
+			RESET,  	KC_F1,    KC_F2,   	KC_F3,  	KC_F4,   	KC_F5,   	KC_F6,   	KC_F7,   	KC_F8,   	KC_F9,   	KC_F10,   KC_F11,  	KC_F12,  	KC_DEL,   CG_TOGG,
+		  KC_TRNS,  RGB_TOG,  RGB_MOD, 	RGB_HUI,	RGB_SAI, 	RGB_VAI, 	KC_TRNS, 	SEL_PV,   SEL_ST, 	SEL_EN,		SEL_NX, 	KC_TRNS,  KC_TRNS, 	KC_TRNS,  KC_ASTG,
+			KC_TRNS,  SEL_PV,   SEL_ST, 	SEL_EN,		SEL_NX, 	KC_TRNS, 	KC_TRNS, 	KC_LEFT, 	KC_UP,   	KC_DOWN, 	KC_RGHT,  KC_TRNS,          	KC_MPLY,  KC_TRNS,
+		  KC_LSFT,  KC_TRNS,  KC_TRNS, 	KC_TRNS,	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_TRNS,  KC_TRNS, 	KC_MUTE, 	KC_VOLU,
+		  KC_TRNS,            KC_TRNS, 	KC_TRNS,  KC_DEL,           	KC_TRNS,  KC_TRNS,                    											KC_MPRV, 	KC_VOLD,  KC_MNXT),
 		[2] = LAYOUT(
 			/*
 			 * █▄░█ █░█ █▀▄▀█ █▀█ ▄▀█ █▀▄
